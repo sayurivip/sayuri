@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sayuri – Segredos Revelados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#e60073',
+            primaryHover: '#ff3399',
+            dark: '#0a0a0a',
+            light: '#f2f2f2',
+            secondary: '#ccc',
+          },
+          fontFamily: {
+            sans: ['"Helvetica Neue"', 'sans-serif'],
+            serif: ['Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .teaser-img {
+      transition: filter 0.5s ease;
+    }
+    .gradient-text {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(45deg, #e60073, #ff3399);
+    }
+    .glow {
+      box-shadow: 0 0 15px rgba(230, 0, 115, 0.5);
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-dark text-light font-sans min-h-screen">
+  <div class="container mx-auto px-4 py-8 max-w-3xl">
+    <!-- Header with animated gradient -->
+    <header class="text-center mb-12 fade-in">
+      <h1 class="text-4xl md:text-5xl font-bold mb-3 gradient-text">Ela não mostra tudo no Instagram</h1>
+      <h2 class="text-xl md:text-2xl text-secondary font-light tracking-wide">Mas aqui, você vê o que só os íntimos conhecem</h2>
+    </header>
+
+    <!-- Image gallery grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div class="overflow-hidden rounded-xl">
+        <img src="https://i.ibb.co/Xf59qYhk/1.png" alt="Sayuri Teaser" class="teaser-img w-full h-auto object-cover cursor-pointer">
+      </div>
+      <div class="overflow-hidden rounded-xl">
+        <img src="https://i.ibb.co/8nKvBzys/image.png" alt="Sayuri Teaser" class="teaser-img w-full h-auto object-cover cursor-pointer">
+      </div>
+    </div>
+
+    <!-- Story section with elegant typography -->
+    <div class="mb-12">
+      <div class="relative">
+        <div class="absolute -left-8 top-0 h-full w-1 bg-gradient-to-b from-primary to-primaryHover hidden md:block"></div>
+        <p class="text-xl md:text-2xl text-secondary/90 font-serif italic leading-relaxed">
+          Sem cortes. Sem filtro. Do jeito que é — e como nunca foi mostrado.<br>
+          Aqui, Sayuri não interpreta. Ela te deixa entrar.<br>
+          Sem legenda. Sem pose. Sem roteiro.<br>
+          Só ela. E você, olhando.
+        </p>
+      </div>
+    </div>
+
+    <!-- Benefits section with icons -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-semibold mb-6 text-center md:text-left">O que você vai receber:</h3>
+      <ul class="space-y-4">
+        <li class="flex items-start">
+          <div class="bg-primary/20 p-2 rounded-full mr-4">
+            <i class="fas fa-camera text-primary text-lg"></i>
+          </div>
+          <span class="text-lg">30 fotos exclusivas da Sayuri</span>
+        </li>
+        <li class="flex items-start">
+          <div class="bg-primary/20 p-2 rounded-full mr-4">
+            <i class="fas fa-fire text-primary text-lg"></i>
+          </div>
+          <span class="text-lg">Conteúdo sensual e sem censura</span>
+        </li>
+        <li class="flex items-start">
+          <div class="bg-primary/20 p-2 rounded-full mr-4">
+            <i class="fas fa-moon text-primary text-lg"></i>
+          </div>
+          <span class="text-lg">Clima intimista, elegante e provocante</span>
+        </li>
+        <li class="flex items-start">
+          <div class="bg-primary/20 p-2 rounded-full mr-4">
+            <i class="fas fa-lock text-primary text-lg"></i>
+          </div>
+          <span class="text-lg">Acesso imediato, 100% anônimo</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CTA Button with glow effect -->
+    <div class="text-center mb-12">
+      <a href="https://chk.eduzz.com/KW8KRG4R01" class="inline-block bg-primary hover:bg-primaryHover text-white font-medium py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 glow">
+        Desbloquear Agora <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+
+    <!-- Footer with subtle border -->
+    <footer class="pt-6 border-t border-gray-800 text-sm text-secondary text-center">
+      <p class="mb-2">Conteúdo adulto. Apenas para maiores de 18 anos.</p>
+      <p>Sem assinatura. Sem enrolação. Privacidade total garantida.</p>
+    </footer>
+  </div>
+
+  <!-- Simple animation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add hover effect to CTA button
+      const ctaButton = document.querySelector('a[href="https://chk.eduzz.com/KW8KRG4R01"]');
+      
+      ctaButton.addEventListener('mouseenter', function() {
+        this.classList.add('glow');
+      });
+      
+      ctaButton.addEventListener('mouseleave', function() {
+        this.classList.remove('glow');
+      });
+      
+      // Add click effect to teaser images
+      const teaserImages = document.querySelectorAll('.teaser-img');
+      
+      teaserImages.forEach(image => {
+        image.addEventListener('click', function() {
+          this.style.filter = 'blur(0)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
